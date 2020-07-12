@@ -1,3 +1,3 @@
 # LMC-CPU-SIMULATOR
-https://peterhigginson.co.uk/lmc/
-copy the code to this simulator
+Copy the code from game1 or game2 to the simulator from this page https://peterhigginson.co.uk/lmc/
+
