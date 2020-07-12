@@ -1,0 +1,48 @@
+START   LDA I
+        OTC
+        LDA ?
+        OTC
+        LDA O
+        OTC
+        LDA _
+        OTC
+LOOP    INP
+        STA TEMP
+        BRZ START
+        SUB Y
+        STA TEMP
+        LDA TEMP
+        BRZ _Off
+        BRP START
+        LDA TEMP
+        ADD X
+        STA TEMP
+        BRZ _ON_
+        BRP START
+I       DAT 73
+?       DAT 63
+O       DAT 79
+N       DAT 78
+f       DAT 102
+_       DAT 32
+TEMP    DAT
+X       DAT 01
+Y       DAT 02
+_Off    LDA _
+        OTC
+        LDA O
+        OTC
+        LDA f
+        OTC
+        LDA f
+        OTC
+        BRA START
+_ON_    LDA _
+        OTC
+        LDA O
+        OTC
+        LDA N
+        OTC
+        LDA _
+        OTC
+        BRA START
